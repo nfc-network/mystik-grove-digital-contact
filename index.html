@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#064f55" />
+    <title>Mystik Grove | Digital Contact</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/intro.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- ==================== INTRO SECTION ==================== -->
+    <section id="intro" class="intro-screen">
+      <div class="intro-glow glow-one"></div>
+      <div class="intro-glow glow-two"></div>
+
+      <div class="intro-content">
+        <div class="orbit">
+          <div class="orbit-ring"></div>
+          <div class="orbit-dot dot-one"></div>
+          <div class="orbit-dot dot-two"></div>
+          <div class="intro-logo-circle">
+            <img src="images/mystic-grove.jpg" alt="Mystic Grove Logo" /> 
+          </div>
+        </div>
+
+        <h1 class="intro-title">MYSTIK GROVE</h1>
+        <p class="intro-subtitle">DIGITAL CONTACT</p>
+        <div class="intro-line"></div>
+      </div>
+
+      <button id="enterButton" class="enter-button">
+        <span>Open Contact</span>
+        <span class="enter-arrow">→</span>
+      </button>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <main id="contactPage" class="contact-page hidden">
+      <div class="side-blur blur-left"></div>
+      <div class="side-blur blur-right"></div>
+
+      <div class="contact-container">
+        <div class="profile-area">
+          <div class="profile-logo">
+            <img src="images/mystic-grove.jpg" alt="Mystic Grove Logo" /> 
+            <span class="logo-placeholder">MG</span>
+          </div>
+
+          <h2>Mystik Grove</h2>
+          <p>Connect with us!</p>
+        </div>
+
+        <div class="contact-buttons">
+          <button class="contact-button" data-type="phone">
+            <span class="button-icon">☎</span>
+            <span>Number</span>
+            <span class="button-arrow">›</span>
+          </button>
+
+          <button class="contact-button" data-type="email">
+            <span class="button-icon">✉</span>
+            <span>Gmail</span>
+            <span class="button-arrow">›</span>
+          </button>
+
+          <button class="contact-button" data-type="facebook">
+            <span class="button-icon">f</span>
+            <span>Facebook Page</span>
+            <span class="button-arrow">›</span>
+          </button>
+
+          <button class="contact-button" data-type="instagram">
+            <span class="button-icon">◎</span>
+            <span>Instagram Page</span>
+            <span class="button-arrow">›</span>
+          </button>
+        </div>
+
+        <p class="footer-text">Tap • Connect • Stay in touch</p>
+      </div>
+    </main>
+
+    <!-- ==================== ACTION MODAL ==================== -->
+    <div id="actionModal" class="modal hidden">
+      <div class="modal-backdrop"></div>
+
+      <div class="modal-box">
+        <button id="closeModal" class="close-modal" aria-label="Close">
+          ×
+        </button>
+
+        <div id="modalIcon" class="modal-icon">☎</div>
+        <h3 id="modalTitle">Number</h3>
+        <p id="modalValue">Mystik Grove Contact Number</p>
+
+        <div id="modalActions" class="modal-actions"></div>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/intro.js"></script>
+    <script src="js/contacts.js"></script>
+    <footer class="footer">
+      <p><small>&copy; 2026 Mystik Grove. All rights reserved.</small></p>
+    </footer>
+  </body>
+</html>

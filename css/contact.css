@@ -1,0 +1,279 @@
+/* ==================== CONTACT SECTION ==================== */
+
+.contact-page {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(9, 103, 110, 0.18), transparent 32%),
+        var(--cream);
+}
+
+.side-blur {
+    position: fixed;
+    width: 260px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(85px);
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.blur-left {
+    left: -190px;
+    top: 20%;
+    background: #0b6870;
+}
+
+.blur-right {
+    right: -190px;
+    bottom: 15%;
+    background: #0b6870;
+}
+
+.contact-container {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 520px);
+    min-height: 100vh;
+    padding: 55px 25px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-area {
+    text-align: center;
+    animation: profileIn 0.8s ease both;
+}
+
+.profile-logo {
+    width: 145px;
+    height: 145px;
+    margin: 0 auto 22px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    background: var(--main);
+    border: 5px solid white;
+    box-shadow: 0 15px 40px rgba(4, 79, 85, 0.22);
+}
+
+.profile-logo .logo-placeholder {
+    font-size: 30px;
+}
+
+.profile-area h2 {
+    color: var(--main-dark);
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.profile-area p {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.contact-buttons {
+    width: 100%;
+    margin-top: 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.contact-button {
+    width: 100%;
+    min-height: 66px;
+    padding: 12px 18px;
+    display: grid;
+    grid-template-columns: 44px 1fr 20px;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    background: rgba(255,255,255,0.78);
+    border: 1px solid rgba(6,79,85,0.10);
+    border-radius: 18px;
+    cursor: pointer;
+    text-align: left;
+    box-shadow: 0 8px 25px rgba(6,79,85,0.08);
+    backdrop-filter: blur(12px);
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-3px);
+    background: white;
+    box-shadow: 0 14px 30px rgba(6,79,85,0.15);
+}
+
+.button-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    color: white;
+    background: var(--main);
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.contact-button > span:nth-child(2) {
+    font-weight: 700;
+}
+
+.button-arrow {
+    color: var(--main);
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+.footer-text {
+    margin-top: auto;
+    padding-top: 45px;
+    color: #9aa8a9;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+}
+
+@keyframes profileIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==================== MODAL ==================== */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(1, 39, 42, 0.55);
+    backdrop-filter: blur(9px);
+}
+
+.modal-box {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 390px);
+    padding: 32px 25px 25px;
+    text-align: center;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+    animation: modalIn 0.25s ease both;
+}
+
+.close-modal {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    border: 0;
+    border-radius: 50%;
+    background: #edf1ef;
+    color: var(--main-dark);
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+.modal-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 15px;
+    display: grid;
+    place-items: center;
+    border-radius: 17px;
+    color: white;
+    background: var(--main);
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.modal-box h3 {
+    color: var(--main-dark);
+    font-size: 1.35rem;
+}
+
+.modal-box p {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    word-break: break-word;
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-top: 25px;
+}
+
+.action-button {
+    width: 100%;
+    padding: 13px 15px;
+    border: 0;
+    border-radius: 13px;
+    color: white;
+    background: var(--main);
+    cursor: pointer;
+    font-weight: 700;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.action-button:hover {
+    transform: translateY(-2px);
+    background: var(--main-light);
+}
+
+.action-button.secondary {
+    color: var(--main-dark);
+    background: #edf3f2;
+}
+
+
+
+
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #9aa8a9;
+    padding: 0 0 0 20px;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    height: 0.5rem;
+    width: 100;
+    background: #edf3f2;
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

@@ -1,0 +1,38 @@
+/* ==================== BASE / GLOBAL ==================== */
+
+:root {
+    --main: #064f55;
+    --main-dark: #033b40;
+    --main-light: #0a6870;
+    --cream: #f5f4ed;
+    --white: #ffffff;
+    --text: #123438;
+    --muted: #789092;
+    --shadow: 0 20px 60px rgba(0, 50, 55, 0.20);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Inter", Arial, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+button {
+    font: inherit;
+}
+
+.hidden {
+    display: none !important;
+}

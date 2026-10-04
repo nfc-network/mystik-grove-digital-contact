@@ -1,0 +1,59 @@
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+@media (max-width: 480px) {
+    .intro-title {
+        letter-spacing: 0.10em;
+    }
+
+    .orbit {
+        width: 215px;
+        height: 215px;
+    }
+
+    .intro-logo-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .enter-button {
+        bottom: 35px;
+    }
+
+    .contact-container {
+        padding: 40px 18px 28px;
+    }
+
+    .profile-logo {
+        width: 125px;
+        height: 125px;
+    }
+
+    .profile-area h2 {
+        font-size: 1.65rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .contact-page {
+        background:
+            radial-gradient(circle at 50% 25%, rgba(9, 103, 110, 0.17), transparent 28%),
+            #e9eeeb;
+    }
+
+    .contact-container {
+        width: 520px;
+        background: rgba(255,255,255,0.35);
+        box-shadow: 0 0 80px rgba(6,79,85,0.08);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
